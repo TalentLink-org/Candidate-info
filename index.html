@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TalentLink Recruitment - Job Application</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00539C;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-height: 50px;
+      vertical-align: middle;
+    }
+    header h1 {
+      display: inline-block;
+      margin: 0 0 0 15px;
+      font-weight: 700;
+      font-size: 1.8em;
+      vertical-align: middle;
+      letter-spacing: 1.2px;
+    }
+    main {
+      max-width: 520px;
+      margin: 40px auto;
+      background: white;
+      padding: 35px 45px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      margin-top: 0;
+      color: #00539C;
+      font-weight: 700;
+      text-align: center;
+    }
+    p.description {
+      text-align: center;
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.4;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 6px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    input[type="file"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #00539C;
+      box-shadow: 0 0 6px #00539C;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      background-color: #00539C;
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      padding: 15px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #003f70;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.85em;
+      margin: 35px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/160x50?text=TalentLink+Logo" alt="TalentLink Recruitment Logo" />
+    <h1>TalentLink Recruitment</h1>
+  </header>
+  <main>
+    <h2>Submit Your Application</h2>
+    <p class="description">
+      Upload your CV and fill in your details below. If your skills and experience match a job opening, our recruiters will contact you soon!
+    </p>
+    <form id="applicationForm" onsubmit="handleSubmit(event)">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Jane Smith" required />
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Street, City, Country" required></textarea>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required />
+
+      <label for="experience">Years of Relevant Experience</label>
+      <input type="number" id="experience" name="experience" min="0" max="50" placeholder="e.g. 5" required />
+
+      <label for="cv">Upload Your CV (PDF or Word)</label>
+      <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </main>
+  <footer>
+    &copy; 2025 TalentLink Recruitment. All rights reserved.
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert(
+        "Thank you for submitting your application!\n\nThis is a friendly phishing awareness test page. No data has been saved."
+      );
+      document.getElementById("applicationForm").reset();
+    }
+  </script>
+</body>
+</html>
