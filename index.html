@@ -1,177 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TalentLink Recruitment</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalentLink Recruitment</title>
+<style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f5f7; /* soft grey background */
+        color: #333;
     }
     header {
-      background: white;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background-color: #0f4c75; /* deep blue */
+        color: white;
+        padding: 15px 30px; /* padding to push text away from left edge */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    header img {
-      max-height: 80px;
-      cursor: pointer;
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li {
+        margin-left: 20px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    .hero {
+        background-color: white;
+        padding: 50px 20px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .hero h1 {
+        margin-bottom: 15px;
     }
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+        padding: 50px 20px;
+        background-color: white;
+        margin: 20px auto;
+        max-width: 1000px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0066cc;
+        text-align: center;
+        margin-bottom: 20px;
     }
-    .expertise, .team, .testimonials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .team, .testimonials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
     }
-    .card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      flex: 1 1 250px;
-      text-align: center;
+    .team img {
+        width: 150px;
+        border-radius: 50%;
     }
-    .team img, .testimonials img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
+    footer {
+        background-color: #0f4c75;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
     }
-    .testimonial-card {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      max-width: 500px;
-      margin: auto;
-    }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    button {
-      background: #0066cc;
-      color: white;
-      cursor: pointer;
-      border: none;
-    }
-    button:hover {
-      background: #004d99;
-    }
-  </style>
+</style>
 </head>
 <body>
 
 <header>
-  <a href="#">
-    <img src="/mnt/data/e51ab2ce-ab44-46c3-ad01-bdb69a87fd25.png" alt="TalentLink Logo"/>
-  </a>
+    <h1>TalentLink</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section>
-  <h2>Areas of Expertise</h2>
-  <div class="expertise">
-    <div class="card">IT & Software</div>
-    <div class="card">Finance & Accounting</div>
-    <div class="card">Marketing & Sales</div>
-    <div class="card">Engineering</div>
-  </div>
+<div class="hero" id="home">
+    <h1>Connecting Talent with Opportunity</h1>
+    <p>We match your skills with the right career path.</p>
+</div>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>TalentLink is your trusted recruitment partner. We work with top employers and match you with positions that suit your skills and career goals.</p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <p>We specialize in IT, Finance, Engineering, and Healthcare recruitment. Our experts work closely with both employers and candidates for a perfect match.</p>
 </section>
 
 <section>
-  <h2>Meet Our Team</h2>
-  <div class="team">
-    <div class="card">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member"/>
-      <h4>John Smith</h4>
-      <p>Senior Recruiter</p>
+    <h2>Meet the Team</h2>
+    <div class="team">
+        <div>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+            <p>John - Senior Recruiter</p>
+        </div>
+        <div>
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+            <p>Sarah - HR Specialist</p>
+        </div>
+        <div>
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Team Member">
+            <p>Michael - Talent Acquisition</p>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member"/>
-      <h4>Emily Johnson</h4>
-      <p>HR Manager</p>
-    </div>
-    <div class="card">
-      <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Team Member"/>
-      <h4>Michael Brown</h4>
-      <p>Talent Acquisition Lead</p>
-    </div>
-  </div>
 </section>
 
 <section>
-  <h2>What Our Clients Say</h2>
-  <div class="testimonials">
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client"/>
-      <p>"TalentLink helped me land my dream job in just two weeks!"</p>
-      <strong>- Sarah Williams</strong>
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+        <blockquote>"TalentLink helped me land my dream job in just two weeks!"</blockquote>
+        <blockquote>"Professional, efficient, and supportive throughout the process."</blockquote>
     </div>
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client"/>
-      <p>"Professional, efficient, and truly cares about matching talent with the right role."</p>
-      <strong>- David Thompson</strong>
-    </div>
-    <div class="testimonial-card">
-      <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Client"/>
-      <p>"I’ve worked with several agencies, but TalentLink stands out for their personal touch."</p>
-      <strong>- Laura Martinez</strong>
-    </div>
-  </div>
 </section>
 
-<section>
-  <h2>Apply Now</h2>
-  <form>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required/>
-
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" placeholder="Enter your address" required/>
-
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required/>
-
-    <label for="experience">Years of Relevant Experience</label>
-    <input type="number" id="experience" name="experience" placeholder="e.g., 3" required/>
-
-    <label for="resume">Upload Resume</label>
-    <input type="file" id="resume" name="resume" required/>
-
-    <button type="submit">Submit Application</button>
-  </form>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <textarea placeholder="Your message" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
 </section>
+
+<footer>
+    <p>© 2025 TalentLink Recruitment</p>
+</footer>
 
 </body>
 </html>
