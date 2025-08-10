@@ -15,10 +15,21 @@
     header {
         background-color: #0f4c75; /* deep blue */
         color: white;
-        padding: 15px 30px; /* padding to push text away from left edge */
+        padding: 15px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    header h1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+    header img {
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
     }
     nav ul {
         list-style: none;
@@ -39,15 +50,15 @@
     }
     .hero {
         background-color: white;
-        padding: 50px 20px;
+        padding: 40px 20px;
         text-align: center;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .hero h1 {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     section {
-        padding: 50px 20px;
+        padding: 40px 20px;
         background-color: white;
         margin: 20px auto;
         max-width: 1000px;
@@ -68,6 +79,28 @@
         width: 150px;
         border-radius: 50%;
     }
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: auto;
+    }
+    form input, form textarea, form button {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    form button {
+        background-color: #0f4c75;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    form button:hover {
+        background-color: #145d8f;
+    }
     footer {
         background-color: #0f4c75;
         color: white;
@@ -80,46 +113,67 @@
 <body>
 
 <header>
-    <h1>TalentLink</h1>
+    <h1>
+        TalentLink
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Briefcase_icon.svg/512px-Briefcase_icon.svg.png" alt="Logo">
+    </h1>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#form">Apply Now</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#team">Team</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="hero" id="home">
     <h1>Connecting Talent with Opportunity</h1>
-    <p>We match your skills with the right career path.</p>
+    <p>We help you land your dream job and assist companies in finding the right talent.</p>
 </div>
+
+<section id="form">
+    <h2>Quick Application Form</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Phone Number" required>
+        <textarea placeholder="Tell us about your skills & experience" required></textarea>
+        <input type="file" accept=".pdf,.doc,.docx" required>
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
 
 <section id="about">
     <h2>About Us</h2>
-    <p>TalentLink is your trusted recruitment partner. We work with top employers and match you with positions that suit your skills and career goals.</p>
+    <p>TalentLink Recruitment is a leading hiring agency that connects skilled professionals with top-tier companies. With over 10 years of experience in the recruitment industry, we specialize in delivering personalized hiring solutions for both employers and job seekers.</p>
 </section>
 
 <section id="services">
-    <h2>Services</h2>
-    <p>We specialize in IT, Finance, Engineering, and Healthcare recruitment. Our experts work closely with both employers and candidates for a perfect match.</p>
+    <h2>Our Services</h2>
+    <ul>
+        <li>Permanent & Contract Recruitment</li>
+        <li>Executive Search & Head Hunting</li>
+        <li>CV Review & Interview Coaching</li>
+        <li>Industry-Specific Talent Pools</li>
+        <li>Remote & International Hiring Solutions</li>
+    </ul>
 </section>
 
-<section>
+<section id="team">
     <h2>Meet the Team</h2>
     <div class="team">
         <div>
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
-            <p>John - Senior Recruiter</p>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John">
+            <p>John Carter - Senior Recruiter</p>
         </div>
         <div>
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
-            <p>Sarah - HR Specialist</p>
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah">
+            <p>Sarah Adams - HR Specialist</p>
         </div>
         <div>
-            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Team Member">
-            <p>Michael - Talent Acquisition</p>
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Michael">
+            <p>Michael Brown - Talent Acquisition</p>
         </div>
     </div>
 </section>
@@ -127,23 +181,13 @@
 <section>
     <h2>Testimonials</h2>
     <div class="testimonials">
-        <blockquote>"TalentLink helped me land my dream job in just two weeks!"</blockquote>
-        <blockquote>"Professional, efficient, and supportive throughout the process."</blockquote>
+        <blockquote>"TalentLink helped me secure a role at a leading tech company within two weeks!"</blockquote>
+        <blockquote>"The team provided excellent guidance and kept me updated throughout the process."</blockquote>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Name" required><br><br>
-        <input type="email" placeholder="Email" required><br><br>
-        <textarea placeholder="Your message" required></textarea><br><br>
-        <button type="submit">Submit</button>
-    </form>
-</section>
-
 <footer>
-    <p>© 2025 TalentLink Recruitment</p>
+    <p>© 2025 TalentLink Recruitment | All Rights Reserved</p>
 </footer>
 
 </body>
