@@ -1,208 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TalentLink Recruitment</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentLink Recruitment</title>
+  <style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f6f7fb;
-        color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
     }
     header {
-        background-color: #1f3c88;
-        color: white;
-        padding: 15px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 15px 30px;
     }
-    header .logo {
-        display: flex;
-        align-items: center;
-        font-size: 1.5em;
-        font-weight: bold;
+    header img.logo {
+      height: 40px;
+      margin-left: 10px;
     }
-    header .logo img {
-        height: 40px;
-        margin-left: 10px;
+    h1 {
+      margin: 0;
+      font-size: 1.8em;
     }
-    nav a {
-        color: white;
-        margin-left: 20px;
-        text-decoration: none;
-    }
-    nav a:hover {
-        text-decoration: underline;
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
     }
     section {
-        padding: 40px 20px;
-        max-width: 1100px;
-        margin: auto;
+      background: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    h1, h2 {
-        text-align: center;
-        color: #1f3c88;
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 15px;
     }
-    /* Form styling */
-    form {
-        background-color: white;
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    form label {
+      display: block;
+      margin-top: 10px;
     }
-    label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    input, select {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+    form button {
+      background-color: #0d47a1;
+      color: white;
+      font-size: 1em;
+      margin-top: 15px;
+      cursor: pointer;
+      border: none;
     }
-    button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #1f3c88;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
-    button:hover {
-        background-color: #16306b;
+    .service {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
     }
-    /* About us */
-    .about {
-        background-color: #fff;
-        padding: 40px;
-        border-radius: 8px;
-        line-height: 1.8;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        font-size: 1.1em;
+    .testimonial-scroll {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
     }
-    .services {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .testimonial {
+      min-width: 250px;
+      background: #f1f8e9;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
     }
-    .service-card {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        width: 300px;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    .testimonial img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
     }
-    /* Testimonials horizontal scroll */
-    .testimonials {
-        display: flex;
-        overflow-x: auto;
-        gap: 20px;
-        padding-bottom: 10px;
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
-    .testimonial-card {
-        min-width: 300px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-        padding: 20px;
-        text-align: center;
+    .team-member {
+      text-align: center;
     }
-    .testimonial-card img {
-        width: 100%;
-        border-radius: 8px;
-        height: 200px;
-        object-fit: cover;
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 8px;
     }
-</style>
+  </style>
 </head>
 <body>
+  <header>
+    <h1>TalentLink</h1>
+    <img src="logo.png" alt="TalentLink Logo" class="logo">
+  </header>
 
-<header>
-    <div class="logo">
-        TalentLink <img src="YOUR_LOGO.png" alt="TalentLink Logo">
-    </div>
-    <nav>
-        <a href="#form">Apply</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#testimonials">Testimonials</a>
-    </nav>
-</header>
+  <main>
+    <section id="apply">
+      <h2>Apply Now</h2>
+      <form>
+        <label>Full Name:</label>
+        <input type="text" name="fullname" required>
 
-<section id="form">
-    <h1>Apply for Opportunities</h1>
-    <form>
-        <label>Full Name</label>
-        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
 
-        <label>Country Code</label>
-        <input type="text" placeholder="+1, +44, +91" required>
+        <label>Country Code:</label>
+        <input type="text" name="countrycode" placeholder="+353" required>
 
-        <label>Phone Number</label>
-        <input type="tel" required>
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required>
 
-        <label>Email</label>
-        <input type="email" required>
-
-        <label>Years of Experience</label>
-        <input type="number" min="0" required>
+        <label>Years of Experience:</label>
+        <input type="number" name="experience" min="0" required>
 
         <label>Do you require sponsorship now or in the future?</label>
-        <select required>
-            <option value="">Select...</option>
-            <option>Yes</option>
-            <option>No</option>
+        <select name="sponsorship" required>
+          <option value="">Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
 
-        <label>Upload Resume</label>
-        <input type="file" accept=".pdf,.doc,.docx" required>
+        <label>Upload Resume:</label>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
 
-        <button type="submit">Submit</button>
-    </form>
-</section>
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
 
-<section id="about">
-    <h2>About Us</h2>
-    <div class="about">
-        TalentLink is a leading recruitment solutions provider connecting talented individuals with top companies worldwide.
-        We focus on creating opportunities for candidates while ensuring our clients find the perfect match for their needs.
-        Our team brings years of industry expertise and a passion for bridging the gap between talent and opportunity.
-    </div>
-</section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        TalentLink is a leading recruitment solutions provider connecting top talent with world-class employers.
+        Our mission is to streamline the hiring process and help candidates find jobs that match their skills and aspirations.
+        We specialize in IT, Engineering, Finance, and other professional sectors, ensuring both candidates and companies achieve their goals.
+      </p>
+    </section>
 
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service-card">IT Recruitment & Staffing</div>
-        <div class="service-card">Global Talent Sourcing</div>
-        <div class="service-card">Campus Hiring Solutions</div>
-    </div>
-</section>
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service">Job Matching</div>
+        <div class="service">Resume Review</div>
+        <div class="service">Interview Coaching</div>
+        <div class="service">Career Counselling</div>
+      </div>
+    </section>
 
-<section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonials">
-        <div class="testimonial-card">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student 1">
-            <p>"TalentLink helped me land my dream job in just 2 weeks!"</p>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-scroll">
+        <div class="testimonial">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Student 1">
+          <p>"TalentLink helped me land my dream job in tech within weeks!"</p>
         </div>
-        <div class="testimonial-card">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student 2">
-            <p>"The process was smooth, professional, and very supportive."</p>
+        <div class="testimonial">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Student 2">
+          <p>"Professional and efficient. Highly recommended!"</p>
         </div>
-        <div class="testimonial-card">
-            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student 3">
-            <p>"Highly recommend TalentLink for anyone seeking career growth."</p>
+        <div class="testimonial">
+          <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Student 3">
+          <p>"Their guidance was invaluable throughout the hiring process."</p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <section id="team">
+      <h2>Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Team 1">
+          <p><strong>John Smith</strong><br>Lead Recruiter</p>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Team 2">
+          <p><strong>Sarah Lee</strong><br>Talent Acquisition Manager</p>
+        </div>
+        <div class="team-member">
+          <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Team 3">
+          <p><strong>Michael Brown</strong><br>Recruitment Consultant</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
